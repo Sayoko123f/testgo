@@ -1,0 +1,10 @@
+<ul>
+    {{ range .Pages }}
+    <li>
+        {{ range .Pages }}
+        <div>{{.Title}}</div>
+        <div>{{.Content}}</div>
+        {{ end }}
+    </li>
+    {{ end }}
+</ul>
