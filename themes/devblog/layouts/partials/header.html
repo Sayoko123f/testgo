@@ -1,0 +1,11 @@
+<header class="flex h-11 px-4 items-center shadow-[inset_0px_-1px_rgba(0,0,0,0.4)]">
+    <nav>
+        <ul class="flex gap-4">
+            {{ range slice .Site.Home | append .Site.Sections }}
+            <li>
+                <a href="{{ .Permalink }}">{{ .Title }}</a>
+            </li>
+            {{ end }}
+        </ul>
+    </nav>
+</header>

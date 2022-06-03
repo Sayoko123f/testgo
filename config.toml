@@ -1,4 +1,10 @@
 baseURL = 'http://example.org/'
 languageCode = 'en-us'
 title = 'My New Hugo Site'
-theme= 'devblog'
+theme = 'devblog'
+enableEmoji = true
+
+[Params]
+    author = ''
+    personalSite = ''
+    github = ''
