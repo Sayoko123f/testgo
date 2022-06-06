@@ -3,14 +3,7 @@
         <a href="{{.Permalink}}" title="{{.Title}}">
             {{ .Title }}</a>
     </h2>
-    <p class="opacity-75">{{ .Date.Format "2006/1/2" }} </p>
-    <div class="flex gap-1 flex-wrap">
-        {{ with .Params.categories }}
-        {{ range . }}<sapn class="rounded bg-purple-200 px-2 py-1">{{ . }}</sapn>{{ end }}
-        {{ end }}
-        {{ with .Params.Tags }}
-        {{ range . }}<sapn class="rounded bg-amber-100 px-2 py-1">{{ . }}</sapn>{{ end }}
-        {{ end }}
-    </div>
-    <p class="opacity-90 mt-4">{{ with .Summary }}{{ . }}{{ else }}{{ with .Description }}{{ . }}{{ end }}{{ end }}</p>
+    <p class="opacity-75">{{ .Date.Format "2006年1月2日" }} </p>
+    {{ partial "post-tags.html" . }}
+    <p class="opacity-90 mt-4">{{ with .Description }}{{ . }}{{ end }}</p>
 </li>
