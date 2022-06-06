@@ -1,9 +1,18 @@
-<header class="flex h-11 px-4 items-center shadow-[inset_0px_-1px_rgba(0,0,0,0.4)]">
-    <nav>
+<header class="flex h-11 px-4 items-center border-b border-black border-opacity-20">
+    <nav class="flex justify-between w-full max-w-4xl mx-auto">
         <ul class="flex gap-4">
             {{ range slice .Site.Home | append .Site.Sections }}
             <li>
-                <a href="{{ .Permalink }}">{{ .Title }}</a>
+                <a class="font-bold" href="{{ .Permalink }}">{{ .Title }}</a>
+            </li>
+            {{ end }}
+        </ul>
+        <ul class="flex gap-4">
+            {{ with .Site.Params.github }}
+            <li class="h-6 w-6">
+                <a href="{{ . }}">
+                    {{ partial "github-svg.html" }}
+                </a>
             </li>
             {{ end }}
         </ul>

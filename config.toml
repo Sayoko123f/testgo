@@ -5,6 +5,5 @@ theme = 'devblog'
 enableEmoji = true
 
 [Params]
-    author = ''
-    personalSite = ''
-    github = ''
+    author = 'Sayoko123f'
+    github = 'https://github.com/Sayoko123f'

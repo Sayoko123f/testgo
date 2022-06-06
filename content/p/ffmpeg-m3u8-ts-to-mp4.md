@@ -2,8 +2,8 @@
 title: "如何將多個 ts 檔案合併為一個 mp4 檔案"
 date: 2022-06-05T09:18:43+08:00
 description: ""
-categories: ['tool']
-tags: ['ffmpeg']
+categories: ['工具']
+tags: ['ffmpeg','tool']
 draft: false
 ---
 # 如何將多個 ts 檔案合併為一個 mp4 檔案

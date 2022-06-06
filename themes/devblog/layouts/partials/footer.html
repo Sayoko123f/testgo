@@ -1,0 +1,12 @@
+<footer class="mt-8 border-t py-4">
+    <div class="flex flex-col justify-center items-center">
+        <button id="goto-top-button" class="opacity-60 hover:opacity-100">回最上方🔺</button>
+        <div class="">
+            {{ with .Site.Params.github }}
+            <a class="w-6 h-6 opacity-60 hover:opacity-100 inline-block" href="{{ . }}" title="Github">
+                {{ partial "github-svg.html" }}
+            </a>
+            {{ end }}
+        </div>
+    </div>
+</footer>

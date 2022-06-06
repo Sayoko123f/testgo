@@ -1,8 +1,8 @@
 <div class="flex gap-1 flex-wrap">
     {{ with .Params.Categories }}
-    {{ range . }}<sapn class="rounded bg-purple-200 px-2 py-1">{{ . }}</sapn>{{ end }}
+    {{ range . }}<a class="rounded bg-stone-200 px-2 py-1" href="{{ with site.GetPage (printf "/categories/%s" . ) }}{{ .Permalink }}{{ end }}">{{ . }}</a>{{ end }}
     {{ end }}
     {{ with .Params.Tags }}
-    {{ range . }}<sapn class="rounded bg-amber-100 px-2 py-1">{{ . }}</sapn>{{ end }}
+    {{ range . }}<a class="rounded bg-stone-200 px-2 py-1" href="{{ with site.GetPage (printf "/tags/%s" . ) }}{{ .Permalink }}{{ end }}">{{ . }}</a>{{ end }}
     {{ end }}
 </div>

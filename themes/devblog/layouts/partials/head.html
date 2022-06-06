@@ -5,4 +5,6 @@
     <title>{{ if .IsHome }}{{ .Title }}{{ else }}{{ .Title }} - {{ .Site.Title }}{{ end }}</title>
     {{- $style := resources.Get "css/w.css" | resources.Minify | resources.Fingerprint -}}
     <link href="{{ $style.RelPermalink }}" rel="stylesheet" />
+    {{- $js := resources.Get "js/x.js" | resources.Minify | resources.Fingerprint -}}
+    <script src="{{ $js.RelPermalink }}" defer></script>
 </head>

@@ -1,9 +1,9 @@
-<li class="mx-4 py-4 max-w-2xl  border-b">
+<li class="mx-4 py-4 max-w-2xl border-b">
     <h2 class="font-bold text-2xl">
         <a href="{{.Permalink}}" title="{{.Title}}">
             {{ .Title }}</a>
     </h2>
-    <p class="opacity-75">{{ .Date.Format "2006年1月2日" }} </p>
+    <p class="opacity-75 py-0.5">{{ .Date.Format "2006年1月2日" }} </p>
     {{ partial "post-tags.html" . }}
     <p class="opacity-90 mt-4">{{ with .Description }}{{ . }}{{ end }}</p>
 </li>
