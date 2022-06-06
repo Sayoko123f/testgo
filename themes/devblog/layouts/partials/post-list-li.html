@@ -1,9 +1,18 @@
-<li class="mx-4 py-4 max-w-2xl border-b">
-    <h2 class="font-bold text-2xl">
-        <a href="{{.Permalink}}" title="{{.Title}}">
-            {{ .Title }}</a>
+<div class="border-b py-2">
+    <h2 class="text-2xl font-bold py-2">
+        <a href="{{ .Permalink}}">
+            {{ .Title }}
+        </a>
     </h2>
-    <p class="opacity-75 py-0.5">{{ .Date.Format "2006年1月2日" }} </p>
-    {{ partial "post-tags.html" . }}
-    <p class="opacity-90 mt-4">{{ with .Description }}{{ . }}{{ end }}</p>
-</li>
+    <div class="flex flex-wrap items-center opacity-80">
+        <span class="mr-2">{{ .Date.Format "2006年1月2日" }}</span>
+        <img class="w-6 h-6 inline-block mr-1" src="/imgs/tag.svg" alt="Tags">
+        {{ partial "post-tags.html" . }}
+    </div>
+    <p class="py-8">
+        {{ .Summary }}
+    </p>
+    <div class="mb-4">
+        <a class="opacity-60 hover:opacity-100" href="{{ .Permalink }}">閱讀更多</a>
+    </div>
+</div>

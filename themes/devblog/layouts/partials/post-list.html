@@ -1,5 +1,13 @@
-<ul>
-    {{ range .Pages }}
+{{ $pages := "" }}
+{{ if .IsHome }}
+    {{ $pages = where .Site.RegularPages "Type" "in" .Site.Params.mainSections }}
+{{ else }}
+    {{ $pages = .Pages }}
+{{ end }}
+
+{{ range (.Paginate ( $pages.ByDate.Reverse )).Pages }}
     {{ partial "post-list-li.html" . }}
-    {{ end }}
-</ul>
+{{ end }}
+<nav class="py-4">
+    {{ partial "pagination.html" . }}
+</nav>

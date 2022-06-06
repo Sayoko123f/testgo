@@ -1,31 +1,8 @@
 {{ define "main" }}
 <main class="max-w-2xl mx-auto px-4">
-    <h1 class="font-bold text-center py-4">{{ site.Title }}</h1>
     <section>
-        <h2 class="text-xl font-bold">最新文章</h2>
-        {{ $pages := where site.RegularPages "Type" "in" site.Params.mainSections }}
-        {{ $newPost := (index (first 1 $pages) 0) }}
-        <ul>
-            {{ partial "post-list-li.html" $newPost}}
-        </ul>
-    </section>
-    <section class="mt-4">
-        <h2 class="text-xl font-bold"><a class="px-4 py-2 rounded-md bg-sky-100" href="{{ (.Site.GetPage (index site.Params.mainSections 0 )).Permalink }}">文章列表點我</a></h2>
-        <p class="py-4">
-            本站目前共有 <span class="font-bold text-lg">{{ len $pages }} </span>篇文章！繼續努力
-        </p>
-        <h2 class="text-xl font-bold py-4">分類</h2>
-        <ul class="flex flex-wrap gap-2">
-            {{ range .Site.Taxonomies.categories }}
-                    <li class="rounded-md bg-stone-200 px-2 py-1"><a href="{{ .Page.Permalink }}">{{ .Page.Title }}</a></li>
-            {{ end }}
-        </ul>
-        <h2 class="text-xl font-bold py-4">標籤</h2>
-        <ul class="flex flex-wrap gap-2">
-            {{ range .Site.Taxonomies.tags }}
-                    <li class="rounded-md bg-stone-200 px-2 py-1"><a href="{{ .Page.Permalink }}">{{ .Page.Title }}</a></li>
-            {{ end }}
-        </ul>
+        <p class="text-xl font-bold py-4">最新文章</p>
+        {{ partial "post-list.html" . }}
     </section>
 </main>
 {{ end }}

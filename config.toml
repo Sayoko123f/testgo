@@ -1,5 +1,5 @@
-baseURL = 'http://example.org/'
-languageCode = 'en-us'
+baseURL = 'https://sayoko123f.github.io/testgo/'
+languageCode = 'zh-TW'
 title = 'My New Hugo Site'
 theme = 'devblog'
 enableEmoji = true

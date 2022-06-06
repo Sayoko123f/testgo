@@ -2,9 +2,13 @@
     <nav class="flex justify-between w-full max-w-4xl mx-auto">
         <ul class="flex gap-4">
             {{ range slice .Site.Home | append .Site.Sections }}
-            <li>
-                <a class="font-bold" href="{{ .Permalink }}">{{ .Title }}</a>
-            </li>
+            {{ partial "header-nav-li.html" . }}
+            {{ end }}
+            {{ with .Site.GetPage "/about" }}
+            {{ partial "header-nav-li.html" . }}
+            {{ end }}
+            {{ with .Site.GetPage "/tags" }}
+            {{ partial "header-nav-li.html" . }}
             {{ end }}
         </ul>
         <ul class="flex gap-4">
