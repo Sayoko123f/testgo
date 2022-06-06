@@ -1,4 +1,4 @@
-baseURL = 'https://sayoko123f.github.io/testgo/'
+baseURL = ''
 languageCode = 'zh-TW'
 title = 'My New Hugo Site'
 theme = 'devblog'

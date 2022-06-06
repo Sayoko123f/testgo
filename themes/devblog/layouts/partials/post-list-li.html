@@ -6,7 +6,7 @@
     </h2>
     <div class="flex flex-wrap items-center opacity-80">
         <span class="mr-2">{{ .Date.Format "2006年1月2日" }}</span>
-        <img class="w-6 h-6 inline-block mr-1" src="/imgs/tag.svg" alt="Tags">
+        <img class="w-6 h-6 inline-block mr-1" src="{{.Site.BaseURL}}imgs/tag.svg" alt="Tags">
         {{ partial "post-tags.html" . }}
     </div>
     <p class="py-8">
