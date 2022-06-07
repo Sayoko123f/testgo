@@ -1,6 +1,6 @@
-<footer class="mt-8 border-t py-4">
+<footer class="mt-8 border-t border-black/20 py-4 dark:border-white/40">
     <div class="flex flex-col justify-center items-center">
-        <button id="goto-top-button" class="opacity-60 hover:opacity-100">回最上方🔺</button>
+        <button id="goto-top-button" class="opacity-60 hover:opacity-100" aria-label="scroll to top">回最上方🔺</button>
         <div class="py-2">
             {{ with .Site.Params.github }}
             <a class="w-6 h-6 opacity-60 hover:opacity-100 inline-block" href="{{ . }}" title="Github">
