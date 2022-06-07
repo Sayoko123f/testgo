@@ -1,0 +1,20 @@
+{{ define "main" }}
+<main class="px-4">
+    {{ $pages := where .Site.RegularPages "Type" "in" .Site.Params.mainSections }}
+    {{ range $pages.GroupByDate "2006" }}
+    <div class="">
+        <p class="text-xl font-bold py-4">
+            {{ .Key }}
+        </p>
+        <div class="pl-8 flex flex-col gap-4 border-l-2">
+            {{ range .Pages }}
+            <div class="flex flex-col lg:flex-row lg:gap-4">
+                <span class="opacity-60">{{ .Date.Format "01月02日" }}</span>
+                <a href="{{ .Permalink }}">{{ .Title }}</a>
+            </div>
+            {{ end }}
+        </div>
+    </div>
+    {{ end }}
+</main>
+{{ end }}
