@@ -15,7 +15,7 @@
 
 {{- if in $validFormats $format }}
 {{- if gt $page.Paginator.TotalPages 1 }}
-<ul class="flex gap-x-2 text-center overflow-scroll">
+<ul class="flex gap-x-2 text-center overflow-x-auto">
     {{- partial (printf "partials/inline/pagination/%s" $format) $page }}
 </ul>
 {{- end }}
